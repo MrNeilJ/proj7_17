@@ -4,7 +4,7 @@
 
 #include <iostream>
 #include <iomanip>
-#include "Accounts.h"
+#include "Account.h"
 using namespace std;
 
 // Function prototypes
@@ -34,6 +34,28 @@ int main()
                         cout << savings.getTransactions()
                              << " transactions.\n";
                         break;
+            case '3':   cout << "Interests earned for this period: $";
+                        cout << savings.getInterest() << endl;
+            case '4':   makeDeposit(savings);
+                        break;
+            case '5':   withdraw(savings);
+                        break;
+            case '6':   savings.calcInterest();
+                        cout << "Interest added.\n";
         }
-    }
+    } while (choice != '7');
+
+    return 0;
+}
+
+/**********************************************************
+ *                      displayMenu                       *
+ *   This function displays the user's menu on the screen *
+ **********************************************************/
+void displayMenu()
+{
+    cout << "\n\n                MENU\n\n";
+    cout << "1) Display the account balance\n";
+    cout << "2) Display the number of transactions\n";
+    cout << "3) Display interest earned for this period\n"
 }
