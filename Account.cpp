@@ -5,11 +5,11 @@ bool Account::withdraw(double amount)
 {
     if (balance < amount)
     {
-        return false    // Not enough in the account
+        return false;   // Not enough in the account
     }
     else
     {
-        balance -- amount;
+        balance -= amount;
         transactions++;
         return true;
     }

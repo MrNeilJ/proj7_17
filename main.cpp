@@ -81,7 +81,7 @@ char getChoice(char max)
         cout    << "choice must be between 1 and " << max << ". "
                 << "Please re-enter choice: ";
         choice = cin.get();
-        cin.ignore;             // Bypass the '\n' in the input buffer
+        cin.ignore();             // Bypass the '\n' in the input buffer
     }
     return choice;
 }
@@ -118,6 +118,6 @@ void makeDeposit(Account &account)
     cin.ignore();
     if (!account.withdraw(dollars))
     {
-        cout << "ERROR: Withdrawal amount too large.\n\n"
+        cout << "ERROR: Withdrawal amount too large.\n\n";
     }
 }
