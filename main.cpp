@@ -57,5 +57,36 @@ void displayMenu()
     cout << "\n\n                MENU\n\n";
     cout << "1) Display the account balance\n";
     cout << "2) Display the number of transactions\n";
-    cout << "3) Display interest earned for this period\n"
+    cout << "3) Display interest earned for this period\n";
+    cout << "4) Make a deposit\n";
+    cout << "5) Make a withdrawal\n";
+    cout << "6) Add interest for this period\n";
+    cout << "7) Exit the program\n\n";
+    cout << "Enter your choice: ";
+
 }
+
+/****************************************************************
+ *                      get Choice                              *
+ *  This function gets, validates, and returns the users choice *
+ ****************************************************************/
+
+char getChoice(char max)
+{
+    char choice = cin.get();
+    cin.ignore();               // Bypass the '\n' in the input buffer
+
+    while (choice < '1' || choice > max)
+    {
+        cout    << "choice must be between 1 and " << max << ". "
+                << "Please re-enter choice: ";
+        choice = cin.get();
+        cin.ignore;             // Bypass the '\n' in the input buffer
+    }
+    return choice;
+}
+
+/****************************************************************
+ *                      get Choice                              *
+ *  This function gets, validates, and returns the users choice *
+ ****************************************************************/
