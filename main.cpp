@@ -16,7 +16,7 @@ void withdraw(Account &);
 int main()
 {
     const char MAX_CHOICE = '7';
-    Account Savings;
+    Account savings;
     char choice;
 
     cout << fixed << showpoint << setprecision(2);
