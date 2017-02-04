@@ -102,3 +102,22 @@ void makeDeposit(Account &account)
     cin.ignore();
     account.makeDespost(dollars);
 }
+
+/********************************************************************
+ *                      withdraw                                    *
+ *    This function accepts a reference to an account object        *
+ *    The user is prompted for the dollar amount of the withdrawal  *
+ *    and the withdraw member of the Account object is then called. *
+ ********************************************************************/
+ void withdraw(Account &account)
+{
+    double dollars;
+
+    cout << "Enter the amount of the withdrawal: ";
+    cin >> dollars;
+    cin.ignore();
+    if (!account.withdraw(dollars))
+    {
+        cout << "ERROR: Withdrawal amount too large.\n\n"
+    }
+}
