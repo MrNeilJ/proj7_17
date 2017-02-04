@@ -87,6 +87,18 @@ char getChoice(char max)
 }
 
 /****************************************************************
- *                      get Choice                              *
- *  This function gets, validates, and returns the users choice *
+ *                      makeDeposit                             *
+ *    This function accepts a reference to an account object    *
+ *    The user is prompted for the dollar amount of the deposit *
+ *    and the makeDeposit member of the Account object is       *
+ *    then called.                                              *
  ****************************************************************/
+void makeDeposit(Account &account)
+{
+    double dollars;
+
+    cout << "Enter the amount of the deposit: ";
+    cin >> dollars;
+    cin.ignore();
+    account.makeDespost(dollars);
+}
